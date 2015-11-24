@@ -1,5 +1,5 @@
 # rebrickable_find_most_mocs
-Find set on rebrickable.com with the most MOCs
+Find set on rebrickable.com with the most MOCs (My Own Creation).
 
 For example, for 2015, the script prints out all set with at least 1 MOC:
 ```
