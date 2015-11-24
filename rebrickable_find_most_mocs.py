@@ -38,7 +38,7 @@ for i in range(concurrent):
     t.start()
 
 
-def rebrickable_find_most_mocs(rebrickable_api_key):
+def rebrickable_find_most_mocs(rebrickable_api_key, year):
     """
     Find which LEGO sets have the most MOCs
 
@@ -75,11 +75,12 @@ def main():
     :return: nothing
     """
     parser = argparse.ArgumentParser(description='Find which LEGO sets have the most MOCs')
+    parser.add_argument('year', help='the year to search')
     parser.add_argument('-r', '--rebrickable_api_key', metavar='REBRICKABLE_API_KEY',
                         help='Rebrickable API key (overrides value in conf file')
     args = parser.parse_args()
 
-    rebrickable_find_most_mocs(args.rebrickable_api_key)
+    rebrickable_find_most_mocs(args.rebrickable_api_key, args.year)
 
 if __name__ == '__main__':
     main()
