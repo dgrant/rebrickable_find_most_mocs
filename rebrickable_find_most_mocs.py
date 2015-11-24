@@ -55,7 +55,7 @@ def rebrickable_find_most_mocs(rebrickable_api_key, year):
                 rebrickable_find_most_mocs_conf.CONF_FILE_NAME))
     rebrickable = Rebrickable(rebrickable_api_key)
  
-    sets = rebrickable.get_all_sets(2014, 2014)
+    sets = rebrickable.get_all_sets(year, year)
     print("num sets total=%s" % (len(sets),))
 
     for set in sets:
