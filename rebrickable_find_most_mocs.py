@@ -63,9 +63,9 @@ def rebrickable_find_most_mocs(rebrickable_api_key, year):
     q.join()
 
     counts.sort(key=operator.itemgetter(1))
-    for set, num_mocs in counts:
-        if num_mocs >= 2:
-            print('%s %s (%s pieces)' % (set['descr'], set['url'], set['pieces'],))
+    for set, num_mocs in reversed(counts):
+        if num_mocs >= 1:
+            print('%s %s (%s pieces) (%d mocs)' % (set['descr'], set['url'], set['pieces'], num_mocs))
 
 
 def main():
